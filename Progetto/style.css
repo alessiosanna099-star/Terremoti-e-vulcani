@@ -1,0 +1,1212 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background: #05070a;
+    color: #f1f3f4;
+    font-family: 'Space Grotesk', sans-serif;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+
+/* HEADER */
+
+header {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 50px;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    position: relative;
+    z-index: 10;
+}
+
+
+.logo {
+    font-size: 14px;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+
+nav {
+    display: flex;
+    gap: 8px;
+}
+
+
+nav button {
+    background: transparent;
+    color: #9ba3aa;
+
+    border: 1px solid transparent;
+
+    padding: 10px 16px;
+
+    font-family: inherit;
+    font-size: 12px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+
+nav button:hover {
+    color: white;
+    border-color: rgba(255,255,255,0.15);
+}
+
+
+/* MAIN */
+
+main {
+    height: calc(100vh - 130px);
+
+    display: grid;
+    grid-template-columns: 38% 62%;
+
+    position: relative;
+}
+
+
+/* INTRO */
+
+.intro {
+    padding: 110px 50px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    position: relative;
+    z-index: 5;
+}
+
+
+.eyebrow {
+    font-family: 'DM Mono', monospace;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    color: #75818a;
+
+    margin-bottom: 25px;
+}
+
+
+h1 {
+    font-size: clamp(60px, 6vw, 100px);
+
+    line-height: 0.9;
+
+    letter-spacing: -5px;
+
+    font-weight: 500;
+
+    margin-bottom: 35px;
+}
+
+
+h1 span {
+    color: #ff593d;
+}
+
+
+.description {
+    max-width: 430px;
+
+    color: #89939a;
+
+    font-size: 16px;
+
+    line-height: 1.7;
+
+    margin-bottom: 40px;
+}
+
+
+.explore-button {
+    width: fit-content;
+
+    padding: 16px 24px;
+
+    border: 1px solid #ff593d;
+
+    background: #ff593d;
+
+    color: white;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.explore-button:hover {
+    background: transparent;
+    color: #ff593d;
+}
+
+/* MAP */
+
+.map-area {
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.map {
+    width: 700px;
+    height: 500px;
+
+    position: relative;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 50% 45%,
+            #172a2d 0%,
+            #0c191d 35%,
+            #071013 65%,
+            #030608 100%
+        );
+
+    box-shadow:
+        0 0 100px rgba(43, 154, 155, 0.08),
+        inset 0 0 100px rgba(0,0,0,0.8);
+
+    transform: perspective(800px) rotateX(12deg);
+}
+
+
+.map-grid {
+    position: absolute;
+    inset: 0;
+
+    border-radius: 50%;
+
+    opacity: 0.25;
+
+    background-image:
+        linear-gradient(
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        ),
+        linear-gradient(
+            90deg,
+            rgba(255,255,255,0.08) 1px,
+            transparent 1px
+        );
+
+    background-size: 50px 50px;
+}
+
+
+.glow {
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    background: rgba(255, 73, 45, 0.12);
+
+    filter: blur(80px);
+
+    border-radius: 50%;
+
+    top: 25%;
+    left: 35%;
+}
+
+
+/* MARKERS */
+
+.marker {
+    position: absolute;
+
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(5, 7, 10, 0.8);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+    z-index: 3;
+}
+
+
+.marker:hover {
+    transform: scale(1.4);
+
+    border-color: #ff593d;
+
+    box-shadow: 0 0 30px rgba(255,89,61,0.4);
+}
+
+
+.marker-1 {
+    top: 48%;
+    left: 51%;
+}
+
+.marker-2 {
+    top: 35%;
+    left: 75%;
+}
+
+.marker-3 {
+    top: 60%;
+    left: 18%;
+}
+
+.marker-4 {
+    top: 40%;
+    left: 85%;
+}
+
+.marker-5 {
+    top: 25%;
+    left: 55%;
+}
+
+
+.map-label {
+    position: absolute;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 10px;
+
+    color: #7f8a91;
+
+    letter-spacing: 1px;
+}
+
+
+.label-1 {
+    top: 55%;
+    left: 54%;
+}
+
+.label-2 {
+    top: 42%;
+    left: 78%;
+}
+
+.label-3 {
+    top: 66%;
+    left: 21%;
+}
+
+
+/* MAP INFO */
+
+.map-info {
+    position: absolute;
+
+    bottom: 40px;
+    right: 50px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #6f7a81;
+
+    display: flex;
+    gap: 10px;
+
+    align-items: center;
+}
+
+
+.status-dot {
+    width: 6px;
+    height: 6px;
+
+    border-radius: 50%;
+
+    background: #36d399;
+
+    box-shadow: 0 0 10px #36d399;
+}
+
+
+/* FOOTER */
+
+footer {
+    height: 50px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 40px;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 9px;
+
+    color: #596168;
+
+    letter-spacing: 1px;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    body {
+        overflow: auto;
+    }
+
+    main {
+        height: auto;
+
+        grid-template-columns: 1fr;
+    }
+
+    .intro {
+        padding: 80px 30px;
+    }
+
+    .map-area {
+        min-height: 600px;
+    }
+
+    header {
+        padding: 0 25px;
+    }
+
+    nav {
+        display: none;
+    }
+
+}
+/* REAL MAP */
+
+#map {
+    width: 90%;
+    height: 75%;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    box-shadow:
+        0 0 80px rgba(0,0,0,0.5),
+        0 0 40px rgba(255,89,61,0.05);
+}
+
+
+/* Leaflet controls */
+
+.leaflet-control-zoom a {
+    background: #080b0e !important;
+    color: white !important;
+
+    border-color: rgba(255,255,255,0.1) !important;
+}
+
+
+.leaflet-popup-content-wrapper,
+.leaflet-popup-tip {
+    background: #0b1014;
+
+    color: #f1f3f4;
+}
+
+
+.leaflet-popup-content {
+    font-family: 'Space Grotesk', sans-serif;
+
+    font-size: 14px;
+
+    line-height: 1.5;
+}
+
+
+.popup-title {
+    color: #ff593d;
+
+    font-size: 18px;
+
+    font-weight: 600;
+
+    margin-bottom: 6px;
+}
+/* ==========================================
+   TETTONICA DELLE PLACCHE
+   ========================================== */
+
+.plate-popup {
+    min-width: 220px;
+}
+
+.plate-popup h3 {
+    margin: 0 0 8px 0;
+
+    color: #4cc9f0;
+
+    font-size: 18px;
+}
+
+.plate-popup p {
+    margin: 0;
+
+    color: #d5dadd;
+
+    line-height: 1.5;
+}
+
+.plate-popup .tag {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 4px 8px;
+
+    border: 1px solid rgba(76,201,240,0.4);
+
+    color: #4cc9f0;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+}
+/* ==========================================
+   LEGENDA MAPPA
+   ========================================== */
+
+.map-legend {
+
+    padding: 14px 16px;
+
+    background: rgba(10, 14, 18, 0.92);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 10px;
+
+    color: #d5dadd;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 11px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.35);
+
+}
+
+
+.legend-title {
+
+    margin-bottom: 10px;
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.legend-item {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin: 7px 0;
+
+}
+
+
+.legend-color {
+
+    display: inline-block;
+
+    width: 20px;
+
+    height: 4px;
+
+    border-radius: 3px;
+
+}
+
+
+.legend-color.plate {
+    background: #e85d75;
+}
+
+
+.legend-color.subduction {
+    background: #ff453a;
+}
+
+
+.legend-color.boundary {
+    background: #4cc9f0;
+}
+
+
+.legend-symbol {
+
+    width: 20px;
+
+    text-align: center;
+
+    font-size: 15px;
+
+}
+
+
+.legend-symbol.volcano {
+
+    color: #ff453a;
+
+}
+
+
+.legend-symbol.earthquake {
+
+    color: #ffd60a;
+
+}
+/* ==========================================
+   MARKER SCIENTIFICI
+   ========================================== */
+
+.science-marker {
+
+    width: 34px;
+    height: 34px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 17px;
+
+    color: white;
+
+    border: 2px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 0 12px rgba(0,0,0,0.45);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+
+}
+
+
+.science-marker:hover {
+
+    transform: scale(1.25);
+
+    box-shadow:
+        0 0 20px rgba(255,255,255,0.35);
+
+}
+
+
+.volcano-marker {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff453a,
+            #ff7b54
+        );
+
+}
+
+
+.earthquake-marker {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffb000,
+            #ffd60a
+        );
+
+    color: #161616;
+
+}
+
+
+.tectonic-marker {
+
+    background:
+        linear-gradient(
+            135deg,
+            #2196f3,
+            #4cc9f0
+        );
+
+}
+/* ==========================================
+   SCHEDE DEI LUOGHI
+   ========================================== */
+
+.location-label {
+
+    margin-top: -4px;
+    margin-bottom: 14px;
+
+    color: #8c969e;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+
+}
+
+
+.place-data {
+
+    margin: 14px 0;
+
+    border-top: 1px solid rgba(255,255,255,0.1);
+
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.data-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 7px 0;
+
+}
+
+
+.data-label {
+
+    color: #7d878f;
+
+    font-size: 10px;
+
+}
+
+
+.data-value {
+
+    color: #ffffff;
+
+    font-size: 10px;
+
+    text-align: right;
+
+}
+
+
+.importance {
+
+    margin-top: 14px;
+
+    padding: 10px;
+
+    background: rgba(76,201,240,0.06);
+
+    border-left: 2px solid #4cc9f0;
+
+}
+
+
+.importance-title {
+
+    margin-bottom: 5px;
+
+    color: #4cc9f0;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.importance p {
+
+    margin: 0;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+}
+/* ==========================================
+   FILTRI MAPPA
+   ========================================== */
+
+.map-filters {
+
+    display: flex;
+
+    gap: 5px;
+
+    padding: 6px;
+
+    background: rgba(10, 14, 18, 0.94);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 10px;
+
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 8px 30px rgba(0,0,0,0.35);
+
+}
+
+
+.map-filters button {
+
+    border: none;
+
+    border-radius: 6px;
+
+    padding: 8px 10px;
+
+    background: transparent;
+
+    color: #89939b;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 0.5px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease;
+
+}
+
+
+.map-filters button:hover {
+
+    color: white;
+
+    background: rgba(255,255,255,0.08);
+
+}
+
+
+.map-filters button.active {
+
+    color: white;
+
+    background: rgba(76,201,240,0.18);
+
+}
+/* ==========================================
+   SCHERMO INTERO
+   ========================================== */
+
+.fullscreen-control {
+
+    background: rgba(10, 14, 18, 0.94);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 6px 20px rgba(0,0,0,0.3);
+
+}
+
+
+.fullscreen-control button {
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.fullscreen-control button:hover {
+
+    background: rgba(255,255,255,0.1);
+
+}
+/* ==========================================
+   PANNELLO INFORMATIVO
+   ========================================== */
+
+#info-panel {
+
+    position: fixed;
+
+    top: 12px;
+    right: 12px;
+    bottom: 12px;
+
+    width: 390px;
+
+    z-index: 2000;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(12,17,22,0.98),
+            rgba(7,11,15,0.98)
+        );
+
+    border:
+        1px solid rgba(255,255,255,0.12);
+
+    border-radius: 14px;
+
+    box-shadow:
+        -10px 0 35px rgba(0,0,0,0.35);
+
+    transform:
+        translateX(calc(100% + 20px));
+
+    transition:
+        transform 0.35s ease;
+
+    overflow-y: auto;
+
+    color: #e7ebee;
+
+}
+
+
+#info-panel.open {
+
+    transform:
+        translateX(0);
+
+}
+
+
+
+#info-content {
+
+    padding: 55px 30px 35px;
+
+}
+
+
+#close-panel {
+
+    position: absolute;
+
+    top: 18px;
+    right: 20px;
+
+    width: 34px;
+    height: 34px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,255,255,0.07);
+
+    color: #ffffff;
+
+    font-size: 23px;
+
+    cursor: pointer;
+
+}
+
+
+#close-panel:hover {
+
+    background:
+        rgba(255,255,255,0.14);
+
+}
+
+
+.info-empty {
+
+    margin-top: 20vh;
+
+    text-align: center;
+
+    color: #87929a;
+
+}
+
+
+.info-icon {
+
+    font-size: 45px;
+
+    color: #4cc9f0;
+
+    margin-bottom: 20px;
+
+}
+
+
+.info-empty h2 {
+
+    margin-bottom: 12px;
+
+    color: #ffffff;
+
+    font-size: 22px;
+
+}
+
+
+.info-empty p {
+
+    font-size: 12px;
+
+    line-height: 1.7;
+
+}
+
+
+/* ==========================================
+   CONTENUTO DELLE SCHEDE
+   ========================================== */
+
+.info-type {
+
+    margin-bottom: 12px;
+
+    color: #4cc9f0;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.info-title {
+
+    margin: 0;
+
+    color: #ffffff;
+
+    font-size: 30px;
+
+    line-height: 1.25;
+
+    letter-spacing: 0.2px;
+
+    font-weight: 600;
+
+}
+
+
+.info-location {
+
+    margin-top: 8px;
+
+    margin-bottom: 25px;
+
+    color: #89939b;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 10px;
+
+}
+
+
+.info-description {
+
+    color: #c5cdd2;
+
+    font-size: 13px;
+
+    line-height: 1.75;
+
+}
+
+
+.info-data {
+
+    margin-top: 25px;
+
+    border-top:
+        1px solid rgba(255,255,255,0.1);
+
+}
+
+
+.info-data-row {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding: 11px 0;
+
+    border-bottom:
+        1px solid rgba(255,255,255,0.06);
+
+}
+
+
+.info-data-label {
+
+    color: #78848c;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 9px;
+
+}
+
+
+.info-data-value {
+
+    color: #ffffff;
+
+    font-size: 11px;
+
+    text-align: right;
+
+}
+
+
+.info-importance {
+
+    margin-top: 25px;
+
+    padding: 16px;
+
+    background:
+        rgba(76,201,240,0.06);
+
+    border-left:
+        2px solid #4cc9f0;
+
+}
+
+
+.info-importance-title {
+
+    margin-bottom: 8px;
+
+    color: #4cc9f0;
+
+    font-family: 'DM Mono', monospace;
+
+    font-size: 9px;
+
+    letter-spacing: 1.5px;
+
+}
+
+
+.info-importance p {
+
+    margin: 0;
+
+    color: #c5cdd2;
+
+    font-size: 12px;
+
+    line-height: 1.65;
+
+}
