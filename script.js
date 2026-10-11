@@ -107,61 +107,92 @@ const platesURL =
 const plateColors = {
 
     AF: "#f6bd60",
+    AM: "#60f697ff",
     AN: "#90dbf4",
+    AP: "#9f93ebff",
     AR: "#f8961e",
+    AT: "#80973aff",
     AU: "#f28482",
     CA: "#f9c74f",
     CO: "#43aa8b",
     EU: "#c084fc",
     IN: "#ff8c42",
     NA: "#4cc9f0",
-    NZ: "#577590",
+    ND: "#4cc9f0",
+    NZ: "#579073ff",
     PA: "#e85d75",
     PS: "#bc6ff1",
-    SA: "#72d572"
-
+    SA: "#72d572",
+    SC: "#72d572",
+    SO: "#e24543ff",
+    SU: "#dbd775ff",
+    YA: "#4730b7ff"
 };
 
 const plateDescriptions = {
 
     AF:
-        "La placca Africana comprende gran parte del continente africano. Nella sua parte orientale è interessata dal Rift dell'Africa orientale.",
+        "Comprende il continente africano e parte dei fondali oceanici circostanti. A est è interessata dal processo di rifting della Rift Valley, dove la litosfera si frattura e tende a separarsi, mentre nell'Atlantico si allontana dalle placche americane.",
+
+    AM:
+        "Si trova nell’Asia orientale e comprende parti della Cina nord-orientale e della Russia.",
 
     AN:
-        "La placca Antartica circonda il continente antartico ed è delimitata da numerose dorsali oceaniche.",
+        "Comprende il continente antartico e i fondali oceanici circostanti. I suoi margini sono prevalentemente divergenti, dove la risalita del magma permette la formazione di nuova crosta oceanica.",
+
+    AP:
+        "L’Altiplano è un vasto altopiano situato tra Perù e Bolivia, nelle Ande centrali, e non una placca tettonica autonoma. La sua formazione è legata alla convergenza tra la placca di Nazca e quella Sudamericana.",
 
     AR:
-        "La placca Arabica si allontana dall'Africa lungo il Mar Rosso e interagisce con la placca Eurasiatica.",
+        "Comprende la penisola Arabica e le aree circostanti. Si muove verso nord-est, entrando in collisione con la placca Eurasiatica e contribuendo alla formazione dei Monti Zagros.",
+
+    AT:
+        "Comprende gran parte della Turchia. Spinta dalla convergenza tra la placca Arabica e quella Eurasiatica, si sposta verso ovest lungo importanti faglie trascorrenti, come la faglia anatolica settentrionale, che provoca forti terremoti.",
 
     AU:
-        "La placca Australiana comprende l'Australia e una vasta porzione dell'Oceano Indiano.",
+        "Comprende l'Australia e vaste aree oceaniche circostanti. Si muove verso nord-est e interagisce con la placca Pacifica, causando fenomeni di subduzione e attività sismica.",
 
     CA:
-        "La placca Caraibica è una piccola placca situata tra Nord e Sud America.",
+        "Comprende gran parte del fondale del Mar dei Caraibi. Interagisce con le placche Nordamericana, Sudamericana e Cocos, generando terremoti e attività vulcanica soprattutto nelle Antille.",
 
     CO:
-        "La placca di Cocos è una placca oceanica situata al largo dell'America Centrale.",
+        "Si trova nell'Oceano Pacifico, al largo dell'America Centrale. Sprofonda sotto le placche circostanti, provocando terremoti, vulcanismo e la formazione di fosse oceaniche.",
 
     EU:
-        "La placca Eurasiatica comprende gran parte dell'Europa e dell'Asia.",
+        "Comprende gran parte dell'Europa e dell'Asia. A sud converge con le placche Africana e Indiana, provocando la formazione di catene montuose come le Alpi e l'Himalaya, oltre a frequenti terremoti.",
 
     IN:
-        "La placca Indiana si muove verso nord e collide con la placca Eurasiatica, contribuendo alla formazione dell'Himalaya.",
+        "Comprende il subcontinente indiano e parte dell'Oceano Indiano. La sua collisione con la placca Eurasiatica ha determinato la formazione dell'Himalaya e dell'altopiano del Tibet.",
 
     NA:
-        "La placca Nordamericana comprende gran parte del Nord America e ampie porzioni degli oceani circostanti.",
+        "Comprende gran parte del Nord America, la Groenlandia e porzioni degli oceani circostanti. A ovest interagisce con la placca Pacifica, causando terremoti, mentre a est si allontana dalla placca Eurasiatica lungo la dorsale medio-atlantica.",
+
+    ND:
+        "È una porzione crostale situata soprattutto tra Colombia ed Ecuador, non una placca principale autonoma. La sua dinamica è influenzata dall’interazione tra le placche di Nazca, Sudamericana e Caraibica.",
 
     NZ:
-        "La placca di Nazca è una placca oceanica situata al largo della costa occidentale del Sud America. La sua subduzione contribuisce alla formazione delle Ande.",
+        "È una placca oceanica situata al largo del Sud America. Sprofonda sotto la placca Sudamericana mediante subduzione, causando la formazione delle Ande, della fossa Perù-Cile e di numerosi terremoti.",
 
     PA:
-        "La placca Pacifica è la più grande placca oceanica della Terra. I suoi margini comprendono numerose zone di subduzione della Cintura di Fuoco del Pacifico.",
+        "È la placca più estesa della Terra ed è costituita prevalentemente da crosta oceanica. I suoi margini sono caratterizzati da subduzione e intensa attività sismica e vulcanica, soprattutto lungo la Cintura di fuoco del Pacifico.",
 
     PS:
-        "La placca delle Filippine è una placca oceanica situata nell'area del Giappone e delle Filippine, caratterizzata da numerose zone di subduzione.",
+        "È una placca prevalentemente oceanica situata nel Pacifico occidentale. I suoi margini convergenti favoriscono la subduzione, causando numerosi terremoti, vulcani e fosse oceaniche.",
 
     SA:
-        "La placca Sudamericana comprende il Sud America. Sul suo margine occidentale la placca di Nazca sprofonda sotto di essa."
+        "Comprende il Sud America e parte dell'Oceano Atlantico. A ovest la placca di Nazca sprofonda sotto di essa per subduzione, provocando la formazione delle Ande e frequenti terremoti ed eruzioni vulcaniche.",
+
+    SC:
+        "Si trova tra l'estremità meridionale del Sud America e l'Antartide. I suoi movimenti convergenti e trascorrenti contribuiscono alla formazione di strutture oceaniche e all'attività sismica regionale.",
+
+    SO:
+        "La placca Somala comprende la parte orientale dell’Africa e si sta separando dalla placca Nubiana attraverso il processo di rifting della Rift Valley. Questo movimento potrebbe portare alla formazione di un nuovo oceano.",
+
+    SU: 
+        "Si trova nel Sud-est asiatico e comprende la penisola indocinese e parte dell’Indonesia.",
+
+    YA: 
+        "Si trova nella Cina centro-meridionale ed è considerata un blocco tettonico continentale. Risente delle spinte generate dalla collisione tra la placca Indiana e quella Eurasiatica."
 };
 
 // ==========================================
@@ -231,7 +262,7 @@ function creaPlacche(data, offset = 0) {
 
             const descrizione =
                 plateDescriptions[codice] ||
-                "Una delle principali placche tettoniche della Terra.";
+                "Placca di dimensioni e importanza secondarie.";
 
             layer.on("mouseover", function() {
 
